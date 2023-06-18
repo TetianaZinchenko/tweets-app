@@ -1,9 +1,15 @@
 # Tweets App
 
+![homepage](homepage.jpg)
+
 ## Description
 
 This application contains cards of users with the number of their tweets and the
 number of subscribers to them and makes it possible to subscribe to some user
+
+![tweetspage-01](tweetspage-01.jpg) ![tweetspage-02](tweetspage-02.jpg)
+![tweetspage-03](tweetspage-03.jpg) ![tweetspage-04](tweetspage-04.jpg)
+![tweetspage-05](tweetspage-05.jpg)
 
 ## Installation
 

@@ -1,5 +1,8 @@
 import styled from '@emotion/styled';
 
+import { theme } from 'theme/theme';
+const { fontSizes, fontWeights, colors } = theme;
+
 export const Container = styled.div`
   margin: 0 auto;
   margin-top: 10px;
@@ -10,18 +13,18 @@ export const Container = styled.div`
   justify-content: center;
 
   border-radius: 20px;
-  border: 3px solid #400080;
+  border: 3px solid ${colors.purpleDark};
 
-  background: linear-gradient(62.93deg, #97ccf0 19.68%, #5218fa 89.55%);
+  background: ${colors.blueGradient};
 `;
 
 export const Title = styled.h1`
   display: block;
 
-  font-weight: 600;
-  font-size: 48px;
+  font-weight: ${fontWeights.semibold};
+  font-size: ${fontSizes[9]}px;
   text-align: center;
-  color: #ffffff;
+  color: ${colors.accent};
 
   animation: title 3000ms infinite;
 

@@ -2,18 +2,9 @@ import { useLocation, NavLink } from 'react-router-dom';
 
 import { BsArrowRightCircle } from 'react-icons/bs';
 
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-
-import img1 from '../images/img_1.webp';
-import img2 from '../images/img_2.webp';
-import img3 from '../images/img_3.webp';
-import img4 from '../images/img_4.webp';
-import img5 from '../images/img_5.webp';
-import img6 from '../images/img_6.webp';
-import img7 from '../images/img_7.webp';
 import { Title } from '../components/App/App.styled';
+
+import HomeSlider from '../components/HomeSlider/HomeSlider';
 
 const styles = {
   container: {
@@ -69,27 +60,9 @@ const styles = {
     fontWeight: 600,
     lineHeight: 1.22,
   },
-
-  img: {
-    width: '100%',
-    height: '500px',
-  },
 };
 
 export default function Home() {
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: 'linear',
-    centerPadding: '60px',
-    swipeToSlide: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-  };
-
   const location = useLocation();
 
   const goTweets = location.state?.from ?? '/tweets';
@@ -103,30 +76,7 @@ export default function Home() {
           <BsArrowRightCircle size={24} outline="#0000a0" />
         </NavLink>
       </div>
-
-      <Slider {...settings}>
-        <div>
-          <img src={img1} alt={'phone'} style={styles.img} />
-        </div>
-        <div>
-          <img src={img2} alt={'phone'} style={styles.img} />
-        </div>
-        <div>
-          <img src={img3} alt={'phone'} style={styles.img} />
-        </div>
-        <div>
-          <img src={img4} alt={'phone'} style={styles.img} />
-        </div>
-        <div>
-          <img src={img5} alt={'phone'} style={styles.img} />
-        </div>
-        <div>
-          <img src={img6} alt={'phone'} style={styles.img} />
-        </div>
-        <div>
-          <img src={img7} alt={'phone'} style={styles.img} />
-        </div>
-      </Slider>
+      <HomeSlider />
     </div>
   );
 }

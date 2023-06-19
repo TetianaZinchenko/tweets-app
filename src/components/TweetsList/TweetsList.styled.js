@@ -1,5 +1,8 @@
 import styled from '@emotion/styled';
 
+import { theme } from 'theme/theme';
+const { fontSizes, fontWeights, colors, shadows } = theme;
+
 export const TweetsContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -10,11 +13,11 @@ export const TweetsContainer = styled.ul`
 
 export const ButtonLoadMore = styled.button`
   font-style: normal;
-  font-weight: 600;
-  font-size: 18px;
+  font-weight: ${fontWeights.semibold};
+  font-size: ${fontSizes[3]}px;
   line-height: calc(22 / 18);
   text-transform: uppercase;
-  color: #373737;
+  color: ${colors.black};
 
   width: 196px;
   height: 50px;
@@ -23,17 +26,17 @@ export const ButtonLoadMore = styled.button`
   margin-top: 30px;
   margin-bottom: 30px;
 
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  box-shadow: ${shadows.defaultShadow};
   border-radius: 10.3108px;
   border: none;
   outline: none;
 
-  background: #ebd8ff;
+  background: ${colors.accent};
 
   cursor: pointer;
 
   &:hover {
-    background: #5cd3a8;
+    background: ${colors.blueLight};
   }
 `;
 
@@ -52,15 +55,15 @@ export const Label = styled.label`
   margin-right: 30px;
 
   text-align: center;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: ${fontSizes[3]}px;
+  font-weight: ${fontWeights.semibold};
   line-height: calc(22 / 18);
-  color: #ebd8ff;
+  color: ${colors.accent};
 
-  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  box-shadow: ${shadows.defaultShadow};
   border-radius: 10.3108px;
 
-  background-color: #5736a3;
+  background-color: ${colors.purple};
 
   outline: none;
 `;
@@ -68,14 +71,14 @@ export const Label = styled.label`
 export const Filter = styled.select`
   padding-left: 5px;
 
-  font-size: 18px;
-  font-weight: 600;
+  font-size: ${fontSizes[3]}px;
+  font-weight: ${fontWeights.semibold};
   line-height: calc(22 / 18);
-  color: #373737;
+  color: ${colors.black};
 
   border-radius: 10.3108px;
 
-  background-color: #ebd8ff;
+  background-color: ${colors.accent};
 
   outline: none;
 
@@ -85,6 +88,6 @@ export const Filter = styled.select`
 export const NoTweets = styled.h3`
   text-align: center;
 
-  font-size: 32px;
-  color: #ff0000;
+  font-size: ${fontSizes[7]}px;
+  color: ${colors.red};
 `;
